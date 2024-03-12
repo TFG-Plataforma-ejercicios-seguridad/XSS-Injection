@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ataques XSS: No Persistente y Persistente</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ataques XSS: No Persistente y Persistente</h1>
+        <h2>Ataque XSS No Persistente</h2>
+        <p>
+            El ataque XSS no persistente, también conocido como "ataque de tipo I", ocurre cuando un atacante inyecta código malicioso en una página web que es procesada y ejecutada por el navegador de un usuario en tiempo real. Esto suele ocurrir a través de formularios web, campos de entrada de datos, parámetros de URL u otras entradas del usuario.
+        </p>
+        <p>
+            El código malicioso se ejecuta en el contexto del usuario afectado, lo que puede llevar a la manipulación de la página, robo de cookies de sesión, redirección a sitios maliciosos o la ejecución de acciones no deseadas en nombre del usuario.
+        </p>
+        <h2>Ataque XSS Persistente</h2>
+        <p>
+            El ataque XSS persistente, también conocido como "ataque de tipo II", se produce cuando el código malicioso se almacena en una aplicación web y se muestra repetidamente a múltiples usuarios. Este código se guarda en la base de datos u otro almacenamiento y se entrega a los usuarios cuando visitan una página web afectada.
+        </p>
+        <p>
+            A menudo, los ataques XSS persistentes se dirigen a secciones de comentarios, perfiles de usuarios u otros campos que pueden ser visibles para otros usuarios. Como resultado, el código malicioso puede propagarse y afectar a múltiples personas.
+        </p>
+    </div>
+    <a href={% url 'xss' %}>Empezar ejercicio</a>
+</body>
+</html>

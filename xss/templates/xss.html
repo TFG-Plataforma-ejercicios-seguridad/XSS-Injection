@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <h1>Formulario de Contacto</h1>
+    <form method="post" action={% url 'xss' %}>
+        {% csrf_token %}
+        <input type="text" id="simple-xss-input" name="xss">
+        <button type="submit">Enviar</button>
+    </form>
+    <p>Mensaje enviado: {{form_mssg | safe}}</p>
+    {%if otp_mssg %}
+        <p>Mensaje encriptado para el administrador mediante OTP (hexadecimal): {{otp_mssg}}</p>
+    {% endif %}
+</body>
+</html>
